@@ -11,37 +11,41 @@ namespace Week_2_day_3_mission_1_revisited
             int firstThrow = numberGen.Next(0, 11);
             int secondThrow = numberGen.Next(0, 11 - firstThrow);
 
-            
-            
-            if(firstThrow < 10)
+
+            Console.Write("First roll: ");
+            if (firstThrow < 10)
             {
+                
                 if(firstThrow == 0)
                 {
-                    Console.WriteLine($"First roll: -");
+                    Console.WriteLine($"-");
                 }
                 else
                 {
-                    Console.WriteLine($"First roll: {firstThrow}");
+                    Console.WriteLine(firstThrow);
 
                 }
+
+                Console.Write("Second roll: ");
+
                 if (secondThrow == 0)
                 {
-                    Console.WriteLine($"Second roll: -");
+                    Console.WriteLine($"-");
 
                 }
                 else if (firstThrow + secondThrow == 10)
                 {
-                    Console.WriteLine($"Second roll: /");
+                    Console.WriteLine($"/");
                 }
                 else
                 {
-                    Console.WriteLine($"Second roll: {secondThrow}");
+                    Console.WriteLine(secondThrow);
                 }
             }
             else
             {
                 
-                Console.WriteLine($"First roll: X");
+                Console.WriteLine($"X");
             }
             Console.WriteLine($"Knocked pins: {firstThrow + secondThrow}");
 
